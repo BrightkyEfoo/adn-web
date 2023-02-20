@@ -1,0 +1,23 @@
+.activities-container{
+    display:grid;
+    width: 100vw;
+    max-width: 1200px;
+    align-self: center;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.activity-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activity-section-head{
+    color : var(--primary-green);
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 25px;
+    
+}

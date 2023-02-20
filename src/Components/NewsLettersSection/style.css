@@ -1,0 +1,46 @@
+.newsletters-container {
+  display: flex;
+  height: 70vh;
+  padding: 0;
+}
+
+.newsletters-left {
+  background-color: rgb(38, 69, 38);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  flex: 1;
+}
+
+.newsletters-left > p {
+  color: white;
+  text-align: left;
+  font-size: 1.8rem;
+  width: 330px;
+  /* max-width: 350px; */
+  font-weight: 700;
+}
+.newsletters-left > div {
+  display: flex;
+  gap: 20px;
+  /* width : 250px */
+}
+
+.newsletters-left > div > input {
+  font-size: 1.1rem;
+  padding: 7px 15px;
+  width: 180px;
+}
+
+.newsletters-left > div > button {
+  font-size: 1.1rem;
+  padding: 7px 15px;
+  color : white;
+  background-color: orange;
+  border-radius: 3px;
+  border-width: 0.2px;
+}
+
+

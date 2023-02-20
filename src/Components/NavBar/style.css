@@ -1,0 +1,129 @@
+.nav-bar-container {
+    height: 120px;
+}
+
+.header-top {
+    color : var(--primary-white);
+    background-color: var(--primary-green);
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-empty-border{
+    font-size: 0.8em;
+    color : var(--primary-white);
+    padding: 5px 30px;
+    background-color: transparent;
+    border-radius: 2px;
+    border-width: 2px;
+    border-color: white;
+    cursor: pointer;
+}
+
+.button-empty{
+    font-size: 0.8em;
+    color : var(--primary-white);
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.header-top-left{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* for the last section of the header */
+
+.header-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 25px;
+}
+
+.header-button-list{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-logo {
+    width : 70px;
+    height : auto;
+    object-fit: cover;
+    cursor : pointer
+}
+
+.button-empty-color{
+    border : none;
+    color : var(--primary-green);
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor : pointer;
+}
+
+.button-empty-border-color{
+    padding : 8px;
+    font-size: 0.7em;
+    font-weight: 700;
+    border-color: var(--primary-green);
+    color : var(--primary-green);
+    background-color: transparent;
+    border-width: 2px;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 500px)  {
+    .header-top {
+        padding: 5px 15px;
+    }
+    .header-top-right{
+        gap: 10px;
+        justify-content: flex-end;
+    }
+
+    .header-top-left{
+        gap: 10px;
+        justify-content: flex-start;
+    }
+ 
+    .header-bottom{
+        position: relative;
+    }
+    .header-button-list{
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+    }
+    
+
+    .button-mobile-1{
+        width: 100%;
+        border : none;
+        border-bottom: 1px solid var(--primary-white);
+        background-color: transparent;
+        color: white;
+    }
+}

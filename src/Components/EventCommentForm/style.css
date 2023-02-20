@@ -1,0 +1,66 @@
+.single-event-form-container,
+.single-event-form-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.single-event-form-container {
+  margin: 25px;
+  align-items: center;
+  gap : 15px;
+}
+
+
+.single-event-form-text-area{
+  height : 150px;
+  resize: none;
+}
+
+.single-event-form-container input[type='text'],
+.single-event-form-container input[type='email'],
+.single-event-form-container textarea {
+  width: 80vw;
+  max-width: 800px;
+  /* min-height: 25px; */
+  font-size: 1.2rem;
+  padding: 8px 20px;
+}
+
+.single-event-form-to-check {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 80vw;
+  padding: 8px 0;
+  max-width : 800px;
+  opacity: 0.7;
+  /* text-align: start;
+  border: 1px solid black; */
+}
+
+.single-event-form-button-container{
+  width: 80vw;
+  padding: 8px 0;
+  max-width : 800px;
+}
+
+.single-event-form-button {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+  color: white;
+  background-color: rgb(38, 69, 38);
+  border: none;
+}
+
+.single-event-form-container-head-1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.single-event-form-container-head-2 {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}

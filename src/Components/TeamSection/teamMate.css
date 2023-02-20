@@ -1,0 +1,43 @@
+.team-mate-container {
+  /* width : 25%; */
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--primary-green);
+}
+
+.team-mate-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team-mate-top-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.team-mate-top-displayname {
+  font-size: 1em;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.team-mate-top-grade {
+  font-size: 0.7em;
+  color: rgb(168, 125, 44);
+}
+
+.team-mate-top-desc {
+  font-size: 0.7em;
+  text-align: start;
+  padding: 20px;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  overflow: hidden;
+  height: 150px;
+
+  /* width : 260px; */
+}

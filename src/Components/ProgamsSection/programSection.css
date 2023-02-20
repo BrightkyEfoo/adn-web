@@ -1,0 +1,52 @@
+.program-card{
+    /* width : 33%;*/
+    height: 45vh;
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    gap : 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.program-card-image{
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.program-card-title{
+    font-size: 1 em;
+    font-weight: 700;
+    color : var(--primary-green);
+    text-align: start;
+}
+
+.program-card-main{
+    font-size: 0.8em;
+    text-align: start;
+}
+
+.program-card-top{
+    display: flex;
+    height: 100px;
+    gap : 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.program-card-button{
+    color: white;
+    background-color: rgb(38, 69, 38);
+    display: flex;
+    padding: 7px 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    font-weight: 700;
+    cursor: pointer;
+    border : 2px solid dargreen;
+    border-radius: 3px;
+}

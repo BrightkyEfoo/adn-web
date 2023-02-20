@@ -1,0 +1,28 @@
+.program-section{
+    background-color: rgb(38, 69, 38);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.program-section-container{
+    padding: 25px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap : 25px;
+}
+
+.programs-container{
+    display: grid;
+    gap : 25px;
+    margin-bottom: 40px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.program-section-container > p {
+    align-self: flex-start;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: white;
+}
