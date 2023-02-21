@@ -9,7 +9,7 @@ const EventCommentForm = ({ eventId }) => {
   const [end, setEnd] = useState(new Date());
   useEffect(() => {
     axios
-      .get('https://adn-api-ugp3.onrender.com/event/' + eventId)
+      .get('http://localhost:9001/event/' + eventId)
       .then(res => {
         setData(res.data.event);
         setBegin(new Date(res.data.event.begin));
@@ -17,7 +17,7 @@ const EventCommentForm = ({ eventId }) => {
       })
       .catch(err => console.log('err', err));
     axios
-      .get('https://adn-api-ugp3.onrender.com/page/EN/event')
+      .get('http://localhost:9001/page/EN/event')
       .then(res => {
         setPage(res.data);
       })

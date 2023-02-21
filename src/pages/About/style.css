@@ -1,0 +1,114 @@
+.about-page-container{
+    display : flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    flex-direction: column;
+}
+
+
+.about-page-section1 , .about-page-section1-sub-container{
+    display: flex;
+    /* padding: 45px; */
+    align-items: center;
+    justify-content: center;
+}
+
+.about-page-section1{
+    height: calc(100vh - 243px);
+
+}
+
+.about-page-section1-sub-container{
+    height: 70%;
+    width: 70%;
+    gap: 25px;
+    /* border: 1px solid black; */
+}
+
+.about-page-section1-left{
+    height: 100%;
+    /* width: 50%; */
+    flex : 1;
+    border-radius: 5px;
+}
+
+.about-page-section1-right{
+    height: 100%;
+    flex : 0.8;
+    /* width: 50%; */
+    color: var(--primary-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 30px;
+    /* padding: 40px; */
+}
+
+.about-page-section1-left > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.about-page-section1-right-head{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.about-page-section1-right-main{
+    width: 90%;
+}
+
+.about-page-section1-right-button{
+    width: 80px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about-page-section2{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 45px; */
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.about-page-section2-sub-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+}
+.about-page-section2-main{
+    justify-content: space-between;
+    display: flex;
+}
+
+.about-page-section2-main-left{
+    width: 70%;
+    column-count: 2;
+    column-gap: 65px;
+}
+
+.about-page-section2-title{
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.about-page-section2-main-image{
+    /* width: 40%; */
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-page-section2-main-left-p{
+    font-size: 1rem;
+}

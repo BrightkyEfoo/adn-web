@@ -7,7 +7,7 @@ const ProgramsSection = ({ Data }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
-      .get('https://adn-api-ugp3.onrender.com/programs/?limit=3')
+      .get('http://localhost:9001/programs/?limit=3')
       .then(res => {
         console.log('res', res.data.programs);
         setData(res.data.programs);

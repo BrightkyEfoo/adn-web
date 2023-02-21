@@ -7,7 +7,7 @@ const Footer = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
-      .get('https://adn-api-ugp3.onrender.com/footer/EN')
+      .get('http://localhost:9001/footer/EN')
       .then(res => {
         setData(res.data.footer);
         console.log('res', res.data.footer);

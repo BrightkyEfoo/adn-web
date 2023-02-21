@@ -11,7 +11,7 @@ const NavBar = () => {
   const [isDisplayMenu, setIsDisplayMenu] = useState(false);
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get('https://adn-api-ugp3.onrender.com/navbar/EN').then(res => {
+    axios.get('http://localhost:9001/navbar/EN').then(res => {
       //   console.log(res.data.navBar);
       setData(res.data.navBar);
     });

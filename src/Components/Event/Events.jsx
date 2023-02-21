@@ -27,7 +27,7 @@ const Events = ({ homeData }) => {
   });
   useEffect(() => {
     axios
-      .get('https://adn-api-ugp3.onrender.com/event')
+      .get('http://localhost:9001/event')
       .then(res => {
         // console.log('last', res.data.events[0]);
         setData(prev => ({

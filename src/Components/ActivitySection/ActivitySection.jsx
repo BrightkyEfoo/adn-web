@@ -6,8 +6,8 @@ import './style.css';
 const ActivitySection = ({ Data }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios
-      .get('https://adn-api-ugp3.onrender.com/activity?order=DESC&number=6')
+    
+      axios.get('http://localhost:9001/activity?order=DESC&number=6')
       .then(res => {
         // console.log(res.data.activities);
         setData(res.data.activities);
