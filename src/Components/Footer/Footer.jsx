@@ -7,7 +7,7 @@ const Footer = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
-      .get('http://localhost:9001/footer/EN')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/footer/EN')
       .then(res => {
         setData(res.data.footer);
         console.log('res', res.data.footer);

@@ -76,7 +76,7 @@ const Calandar = ({size}) => {
   const [selectedDay, setSelectedDay] = useState(0);
   useEffect(() => {
     axios
-      .post('http://localhost:9001/event', {
+      .post('https://adn-backend-mj63t.ondigitalocean.app/event', {
         begin: firstDay.toISOString(),
         end: endDay.toISOString(),
       })
@@ -236,7 +236,7 @@ const DateBox = ({ date, events, checked, now }) => {
       setActualEvents(null);
       // setActualEvents(prev => ({ ...prev, loading: true }));
       axios
-        .post(`http://localhost:9001/event/actual`, {
+        .post(`https://adn-backend-mj63t.ondigitalocean.app/event/actual`, {
           begin: toDay.toISOString(),
           end: toDayEnd.toISOString(),
         })
@@ -252,7 +252,7 @@ const DateBox = ({ date, events, checked, now }) => {
       setActualEvents(null);
       // setActualEvents(prev => ({ ...prev, loading: true }));
       axios
-        .post(`http://localhost:9001/event/actual`, {
+        .post(`https://adn-backend-mj63t.ondigitalocean.app/event/actual`, {
           begin: toDay.toISOString(),
           end: toDayEnd.toISOString(),
         })

@@ -27,7 +27,7 @@ const Events = ({ homeData }) => {
   });
   useEffect(() => {
     axios
-      .get('http://localhost:9001/event')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/event')
       .then(res => {
         // console.log('last', res.data.events[0]);
         setData(prev => ({

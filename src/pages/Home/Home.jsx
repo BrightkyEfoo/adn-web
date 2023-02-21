@@ -90,7 +90,7 @@ const Home = () => {
   const [data, setData] = useState(null);
   
   useEffect(() => {
-    axios.get('http://localhost:9001/page/EN/homepage').then(res => {
+    axios.get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/homepage').then(res => {
       console.log(res.data.page);
       setData(res.data.page);
       setMainSlides(
