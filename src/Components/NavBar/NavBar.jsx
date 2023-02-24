@@ -23,8 +23,8 @@ const NavBar = () => {
         {/* first part of the header */}
         <div className="header-top">
           <div className="header-top-left">
-            <button className="button-empty-border">{data.section1[0]}</button>
-            <button className="button-empty">{data.section1[1]}</button>
+            <button className="button-empty-border" onClick={() => navigate('/login')}>{data.section1[0]}</button>
+            <button className="button-empty" onClick={() => navigate('/')}>{data.section1[1]}</button>
           </div>
           <div className="header-top-right">
             <a href={`mailto:${data.section2.email}`}>
@@ -51,7 +51,7 @@ const NavBar = () => {
         {/* second part of the header */}
 
         <div className="header-bottom">
-          <img className="header-logo" src={data.logo} alt="logo" />
+          <img className="header-logo" onClick={() => navigate('/')} src={data.logo} alt="logo" />
           {isMobile && (
             <button onClick={() => setIsDisplayMenu(prev => !prev)}>
               {isDisplayMenu ? <GrClose /> : <GrMenu />}
@@ -62,7 +62,7 @@ const NavBar = () => {
               {data.links.map((link, i) => {
                 return (
                   <button
-                    onClick={() => navigate(link.url)}
+                    onClick={i<3 ? () => navigate(link.url) : null}
                     className={
                       isMobile ? 'button-mobile-1' : 'button-empty-color'
                     }
@@ -101,7 +101,7 @@ const NavBar = () => {
       </div>
     );
   } else {
-    return <div>loading</div>;
+    return null;
   }
 };
 

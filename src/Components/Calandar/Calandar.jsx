@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { GoPrimitiveDot } from 'react-icons/go';
 import styled from 'styled-components';
-import { arrayUnion } from '../../helpers';
+import { arrayUnion, ellipsis } from '../../helpers';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 const Days = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
@@ -153,7 +153,7 @@ const Calandar = ({size}) => {
                     </p>
                   ))}
                   <p className="actual-event-box-main">
-                    {actualEvents[0].main}
+                    {ellipsis(90,actualEvents[0].main)}
                   </p>
                   <button
                     className="actual-event-box-button"
@@ -179,9 +179,7 @@ const Calandar = ({size}) => {
               </div>
             </>
           ) : (
-            <>
-              <div>loading</div>
-            </>
+            null
           )}
         </Left>
       </Container>

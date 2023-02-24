@@ -13,6 +13,7 @@ import './swiper-bundle.css';
 import './style.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Navigation, Thumbs, Autoplay } from 'swiper';
+import Loader from '../../Components/Loader/Loader';
 // import './swiper-bundle.css';
 // import './style.css';
 SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]);
@@ -159,7 +160,7 @@ const Home = () => {
       </Container>
     );
   } else {
-    return <div>loading</div>;
+    return <Loader />;
   }
 };
 

@@ -1,0 +1,25 @@
+.loader{
+    z-index: 1000;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(38, 69, 38, 0.408);
+    backdrop-filter: blur('5px');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.loading-logo{
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+.loading-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4f4f4f;
+}

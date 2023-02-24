@@ -6,6 +6,7 @@ import Section1 from '../../Components/Section1/Section1';
 import FocalPointContainer from '../../Components/FocalPoints/FocalPointContainer';
 import NewsLettersSection from '../../Components/NewsLettersSection/NewsLettersSection';
 import Footer from '../../Components/Footer/Footer';
+import Loader from '../../Components/Loader/Loader';
 
 const About = () => {
   const [pageData, setPageData] = useState(null);
@@ -81,7 +82,7 @@ const About = () => {
       <Footer />
     </div>
   ) : (
-    <div>Loading</div>
+    <Loader/>
   );
 };
 

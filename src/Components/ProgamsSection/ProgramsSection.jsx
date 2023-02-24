@@ -29,7 +29,7 @@ const ProgramsSection = ({ Data }) => {
       </div>
     </div>
   ) : (
-    <div>loading</div>
+    null
   );
 };
 

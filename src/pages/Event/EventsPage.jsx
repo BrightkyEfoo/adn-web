@@ -7,6 +7,7 @@ import './style.css';
 import Event from '../../Components/Event/Event';
 import NewsLettersSection from '../../Components/NewsLettersSection/NewsLettersSection';
 import Footer from '../../Components/Footer/Footer';
+import Loader from '../../Components/Loader/Loader';
 
 const EventsPage = () => {
   const [data, setData] = useState(null);
@@ -42,7 +43,7 @@ const EventsPage = () => {
               return <Event event={el} title={data.section2.title} key={i} />;
             })
           ) : (
-            <div>loading</div>
+            null
           )}
         </div>
         {/* </div> */}
@@ -54,7 +55,7 @@ const EventsPage = () => {
       <Footer />
     </div>
   ) : (
-    <div>loading</div>
+    <Loader />
   );
 };
 

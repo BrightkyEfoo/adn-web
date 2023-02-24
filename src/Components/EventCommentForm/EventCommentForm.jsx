@@ -49,7 +49,7 @@ const EventCommentForm = ({ eventId }) => {
       </div>
     </div>
   ) : (
-    <div>loading</div>
+    null
   );
 };
 

@@ -29,7 +29,7 @@ const FocalPointContainer = ({ title }) => {
       </div>
     </div>
   ) : (
-    <div>Loading</div>
+    null
   );
 };
 

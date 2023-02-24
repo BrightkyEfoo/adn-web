@@ -27,7 +27,7 @@ const ActivitySection = ({ Data }) => {
       </div>
     </div>
   ) : (
-    <div>Loading</div>
+    null
   );
 };
 

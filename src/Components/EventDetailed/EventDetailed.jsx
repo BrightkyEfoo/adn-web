@@ -10,6 +10,7 @@ import {
 } from 'react-icons/md';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+import Loader from '../Loader/Loader';
 
 const EventDetailed = ({ eventId }) => {
   const navigate = useNavigate()
@@ -173,7 +174,7 @@ const EventDetailed = ({ eventId }) => {
       </div>
     </>
   ) : (
-    <div>loading</div>
+    <Loader />
   );
 };
 

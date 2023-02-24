@@ -25,7 +25,7 @@ const ProgramCard = ({ Data, index }) => {
       </button>
     </div>
   ) : (
-    <div>loading</div>
+    null
   );
 };
 

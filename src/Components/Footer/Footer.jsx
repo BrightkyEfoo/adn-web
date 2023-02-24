@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
     </div>
   ) : (
-    <div>loading</div>
+    null
   );
 };
 

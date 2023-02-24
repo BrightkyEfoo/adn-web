@@ -1,0 +1,96 @@
+.user-edit-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background-color: rgba(0, 70, 0, 0.223);
+  backdrop-filter: blur(5px);
+}
+
+.user-edit-container > input {
+  display: none;
+}
+
+.user-edit-form-container {
+  background-color: #ffffffd3;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-edit-form-container input {
+  height: 30px;
+  background: transparent;
+  border: 1px solid var(--primary-green);
+}
+
+.user-edit-form-container > div:nth-child(1) {
+  display: grid;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.user-edit-form-container > div:nth-child(1) img {
+  width: 200px;
+  object-fit: contain;
+}
+
+.user-edit-form-container > div:nth-child(1) > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-edit-form-container > div:nth-child(1) > div:nth-child(2) > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.user-edit-form-container > div:nth-child(1) input[type='number'] {
+  width: 40px;
+  height: 30px;
+  text-align: end;
+}
+
+/* .user-edit-form-container  */
+
+.user-edit-form-container > div:nth-child(2),
+.user-edit-form-container > div:nth-child(3) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.user-edit-form-container input[type='text'],
+.user-edit-form-container input[type='email'],
+.user-edit-form-container input[type='password'] {
+  padding-left: 15px;
+}
+
+.user-edit-form-container > div:last-child {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.user-edit-form-container > div:last-child > button:first-child {
+  background-color: var(--primary-green);
+  border: none;
+  color: white;
+  height: 30px;
+  padding: 8px 25px;
+}
+.user-edit-form-container > div:last-child > button:last-child {
+  background-color: transparent;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+  height: 30px;
+  padding: 8px 25px;
+}
