@@ -14,12 +14,12 @@ const EventsPage = () => {
   const [events, setEvents] = useState(null);
   useEffect(() => {
     axios
-      .get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/eventpage')
+      .get('http://localhost:9001/page/EN/eventpage')
       .then(res => {
         setData(res.data.page);
       })
       .catch(err => console.log('err', err));
-    axios.get('https://adn-backend-mj63t.ondigitalocean.app/event/?limit=4').then(res => {
+    axios.get('http://localhost:9001/event/?limit=4').then(res => {
       setEvents(res.data.events);
     });
   }, []);

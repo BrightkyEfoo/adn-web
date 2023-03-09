@@ -5,7 +5,7 @@ import './style.css'
 const Loader = () => {
   return (
     <div className="loader">
-      <img className='loading-logo' src='https://adn-backend-mj63t.ondigitalocean.app/public/homePage/FR/logo.png' alt='' />
+      <img className='loading-logo' src='http://localhost:9001/public/homePage/FR/logo.png' alt='' />
       <GridLoader
         color="#4f4f4f"
         margin={5}

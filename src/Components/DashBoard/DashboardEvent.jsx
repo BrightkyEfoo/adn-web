@@ -14,7 +14,7 @@ const DashboardEvent = ({ event }) => {
   const handleDelete = e => {
     axios
       .delete(
-        'https://adn-backend-mj63t.ondigitalocean.app/event/' + event.id + '?userId=' + user.id,
+        'http://localhost:9001/event/' + event.id + '?userId=' + user.id,
         {
           headers: {
             Authorization: Token,

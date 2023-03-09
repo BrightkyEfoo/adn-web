@@ -23,7 +23,9 @@ const UserDetailsView = () => {
     preview: null,
     data: null,
   });
-  const handleClickImage = e => {};
+  const handleClickImage = e => {
+    inputFileRef.current.click();
+  };
   const inputFileRef = useRef(null);
   const handleChange = e => {
     setForm(prev => {
@@ -47,7 +49,7 @@ const UserDetailsView = () => {
         console.log('formData', formData);
         formData.append('addImage', image.data);
         axios
-          .post('https://adn-backend-mj63t.ondigitalocean.app/addImageToServer', formData, {
+          .post('http://localhost:9001/addImageToServer', formData, {
             headers: {
               Authorization: Token,
             },
@@ -63,7 +65,7 @@ const UserDetailsView = () => {
               verifyPassword: verif.currentPassword,
             };
             axios
-              .put('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id, data, {
+              .put('http://localhost:9001/user/' + user.id, data, {
                 headers: {
                   Authorization: Token,
                 },
@@ -85,7 +87,7 @@ const UserDetailsView = () => {
           verifyPassword: verif.currentPassword,
         };
         axios
-          .put('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id, data, {
+          .put('http://localhost:9001/user/' + user.id, data, {
             headers: {
               Authorization: Token,
             },
@@ -100,13 +102,24 @@ const UserDetailsView = () => {
     }
   };
   // let a = verif.confirmPassword === form.pass
+  const handleFileChange = e => {
+    // setIsImageLoading(true);
+    console.log(e.target.files);
+    const img = {
+      preview: URL.createObjectURL(e.target.files[0]),
+      data: e.target.files[0],
+    };
+    setImage(img);
+
+    // setIsImageLoading(false);
+  };
 
   useEffect(() => {
     setCanSubmit(form.password === verif.confirmPassword);
   }, [form.password, verif.confirmPassword]);
   useEffect(() => {
     axios
-      .get('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id + '?userId=' + user.id, {
+      .get('http://localhost:9001/user/' + user.id + '?userId=' + user.id, {
         headers: {
           Authorization: Token,
         },
@@ -136,14 +149,16 @@ const UserDetailsView = () => {
       <div onClick={handleClickImage}>
         {image.preview || form.profilePic ? (
           <img
+          onClick={handleClickImage}
             src={image.preview || form.profilePic}
             alt=""
             className="user-edit-form-1-left-image"
           />
         ) : (
-          <>
+          
+          <div onClick={handleClickImage}>
             <BiImageAdd size={25} /> <p>Add an image</p>
-          </>
+          </div>
         )}
       </div>
       <p>Edit Acount Details</p>
@@ -210,7 +225,7 @@ const UserDetailsView = () => {
           Save changes
         </button>
       </div>
-      <input type="file" ref={inputFileRef} />
+      <input type="file" ref={inputFileRef} onChange={handleFileChange}/>
     </div>
   );
 };

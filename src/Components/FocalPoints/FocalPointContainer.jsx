@@ -6,7 +6,7 @@ import './style.css';
 const FocalPointContainer = ({ title }) => {
   const [focalPoints, setFocalPoints] = useState(null);
   useEffect(() => {
-    axios.get('https://adn-backend-mj63t.ondigitalocean.app/focalpoints').then(({ data }) => {
+    axios.get('http://localhost:9001/focalpoints').then(({ data }) => {
       console.log('data', data);
       setFocalPoints(data.focalPoints);
     });

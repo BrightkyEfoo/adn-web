@@ -12,7 +12,7 @@ const EventView = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get('https://adn-backend-mj63t.ondigitalocean.app/event')
+      .get('http://localhost:9001/event')
       .then(res => {
         console.log('res.data', res.data);
         setEvents(res.data.events);

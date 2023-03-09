@@ -14,6 +14,8 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import EventEdit from './Components/EventEdit/EventEdit';
 import { useSelector } from 'react-redux';
 import UserEdit from './Components/UserEdit/UserEdit';
+import Directors from './pages/About/Directors';
+import Vmv from './pages/About/Vmv';
 function App() {
   const eventEditState = useSelector(state => state.EventEdit);
   const userEditState = useSelector(state => state.UserEdit);
@@ -26,7 +28,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/events/:eventId" element={<SingleEventPage />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<About />} />
+          {/* <Route path="/directors" element={<Directors />} /> */}
+          {/* <Route path="/vmv" element={<Vmv />} /> */}
           <Route path="/Dashboard" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
         </Routes>
