@@ -9,7 +9,7 @@ const EventCommentForm = ({ eventId }) => {
   const [end, setEnd] = useState(new Date());
   useEffect(() => {
     axios
-      .get('http://localhost:9001/event/' + eventId)
+      .get('https://adn-backend-mj63t.ondigitalocean.app/event/' + eventId)
       .then(res => {
         setData(res.data.event);
         setBegin(new Date(res.data.event.begin));
@@ -17,7 +17,7 @@ const EventCommentForm = ({ eventId }) => {
       })
       .catch(err => console.log('err', err));
     axios
-      .get('http://localhost:9001/page/EN/event')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/event')
       .then(res => {
         setPage(res.data);
       })

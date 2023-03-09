@@ -13,14 +13,14 @@ const Vmv = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:9001/view/?language=EN&name=doctoraboutpage')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/view/?language=EN&name=doctoraboutpage')
       .then(({ data }) => {
         console.log('data', data);
         setPageData(data.view);
       })
       .catch(err => console.log('err', err));
     axios
-      .get('http://localhost:9001/page/EN/homepage')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/homepage')
       .then(res => {
         console.log(res.data.page);
         setData(res.data.page);
@@ -28,7 +28,7 @@ const Vmv = () => {
       .catch(err => console.log('err', err));
 
     axios
-      .get('http://localhost:9001/user/doctor')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/user/doctor')
       .then(res => {
         console.log(res.data.doctors);
         setDoctors(res.data.doctors);

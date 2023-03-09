@@ -14,7 +14,7 @@ const SettingsView = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     axios
-      .get('http://localhost:9001/user?userId=' + User.id, {
+      .get('https://adn-backend-mj63t.ondigitalocean.app/user?userId=' + User.id, {
         headers: {
           Authorization: Token,
         },

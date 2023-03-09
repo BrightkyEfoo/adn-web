@@ -7,7 +7,7 @@ const ActivitySection = ({ Data }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
     
-      axios.get('http://localhost:9001/activity?order=DESC&number=6')
+      axios.get('https://adn-backend-mj63t.ondigitalocean.app/activity?order=DESC&number=6')
       .then(res => {
         // console.log(res.data.activities);
         setData(res.data.activities);

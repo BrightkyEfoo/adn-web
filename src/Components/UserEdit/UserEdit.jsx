@@ -52,7 +52,7 @@ const UserEdit = () => {
       if (image.data) {
         axios
           .post(
-            'http://localhost:9001/addImageToServer',
+            'https://adn-backend-mj63t.ondigitalocean.app/addImageToServer',
             formData,
             {
               headers: {
@@ -73,7 +73,7 @@ const UserEdit = () => {
             console.log('data', data);
             axios
               .put(
-                'http://localhost:9001/user/' +
+                'https://adn-backend-mj63t.ondigitalocean.app/user/' +
                   userToEdit.id,
                 data,
                 {
@@ -99,7 +99,7 @@ const UserEdit = () => {
         console.log('data', data);
         axios
           .put(
-            'http://localhost:9001/user/' +
+            'https://adn-backend-mj63t.ondigitalocean.app/user/' +
               userToEdit.id,
             data,
             {
@@ -118,7 +118,7 @@ const UserEdit = () => {
     } else {
       axios
         .post(
-          'http://localhost:9001/addImageToServer',
+          'https://adn-backend-mj63t.ondigitalocean.app/addImageToServer',
           formData,
           {
             headers: {
@@ -129,7 +129,7 @@ const UserEdit = () => {
         .then(res => {
           axios
             .post(
-              'http://localhost:9001/user',
+              'https://adn-backend-mj63t.ondigitalocean.app/user',
               { ...form, profilePic: res.data.url, userId: user.id },
               {
                 headers: {

@@ -14,14 +14,14 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:9001/page/EN/aboutpage')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/aboutpage')
       .then(({ data }) => {
         console.log('data', data);
         setPageData(data.page);
       })
       .catch(err => console.log('err', err));
     axios
-      .get('http://localhost:9001/page/EN/homepage')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/page/EN/homepage')
       .then(res => {
         console.log(res.data.page);
         setData(res.data.page);

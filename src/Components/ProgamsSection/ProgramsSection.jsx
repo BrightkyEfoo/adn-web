@@ -7,7 +7,7 @@ const ProgramsSection = ({ Data }) => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
-      .get('http://localhost:9001/programs/?limit=3')
+      .get('https://adn-backend-mj63t.ondigitalocean.app/programs/?limit=3')
       .then(res => {
         console.log('res', res.data.programs);
         setData(res.data.programs);

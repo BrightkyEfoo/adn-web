@@ -16,7 +16,7 @@ const UserCard = ({ user }) => {
   };
   const handleDelete = e => {
     axios
-      .delete('http://localhost:9001/user/' + user.id, {
+      .delete('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id, {
         headers: {
           Authorization: Token,
         },
@@ -37,7 +37,7 @@ const UserCard = ({ user }) => {
         className="users-card-profile-pic"
         src={
           user.profilePic ||
-          'http://localhost:9001/public/images/profilePhoto.jpg'
+          'https://adn-backend-mj63t.ondigitalocean.app/public/images/profilePhoto.jpg'
         }
         alt=""
       />

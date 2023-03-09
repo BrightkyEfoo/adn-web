@@ -74,7 +74,7 @@ const EventEdit = () => {
       if (image.data) {
         axios
           .post(
-            'http://localhost:9001/addImageToServer',
+            'https://adn-backend-mj63t.ondigitalocean.app/addImageToServer',
             formData,
             {
               headers: {
@@ -85,7 +85,7 @@ const EventEdit = () => {
           .then(res => {
             axios
               .put(
-                'http://localhost:9001/event/' +
+                'https://adn-backend-mj63t.ondigitalocean.app/event/' +
                   event.id,
                 {
                   userId: User.id,
@@ -126,7 +126,7 @@ const EventEdit = () => {
       } else {
         axios
           .put(
-            'http://localhost:9001/event/' + event.id,
+            'https://adn-backend-mj63t.ondigitalocean.app/event/' + event.id,
             {
               userId: User.id,
               event: {
@@ -162,7 +162,7 @@ const EventEdit = () => {
     } else {
       axios
         .post(
-          'http://localhost:9001/addImageToServer',
+          'https://adn-backend-mj63t.ondigitalocean.app/addImageToServer',
           formData,
           {
             headers: {
@@ -173,7 +173,7 @@ const EventEdit = () => {
         .then(res => {
           axios
             .post(
-              'http://localhost:9001/event/settings/',
+              'https://adn-backend-mj63t.ondigitalocean.app/event/settings/',
               {
                 ...form,
                 image: res.data.url,

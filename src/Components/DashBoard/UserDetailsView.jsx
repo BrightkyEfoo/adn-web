@@ -49,7 +49,7 @@ const UserDetailsView = () => {
         console.log('formData', formData);
         formData.append('addImage', image.data);
         axios
-          .post('http://localhost:9001/addImageToServer', formData, {
+          .post('https://adn-backend-mj63t.ondigitalocean.app/addImageToServer', formData, {
             headers: {
               Authorization: Token,
             },
@@ -65,7 +65,7 @@ const UserDetailsView = () => {
               verifyPassword: verif.currentPassword,
             };
             axios
-              .put('http://localhost:9001/user/' + user.id, data, {
+              .put('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id, data, {
                 headers: {
                   Authorization: Token,
                 },
@@ -87,7 +87,7 @@ const UserDetailsView = () => {
           verifyPassword: verif.currentPassword,
         };
         axios
-          .put('http://localhost:9001/user/' + user.id, data, {
+          .put('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id, data, {
             headers: {
               Authorization: Token,
             },
@@ -119,7 +119,7 @@ const UserDetailsView = () => {
   }, [form.password, verif.confirmPassword]);
   useEffect(() => {
     axios
-      .get('http://localhost:9001/user/' + user.id + '?userId=' + user.id, {
+      .get('https://adn-backend-mj63t.ondigitalocean.app/user/' + user.id + '?userId=' + user.id, {
         headers: {
           Authorization: Token,
         },

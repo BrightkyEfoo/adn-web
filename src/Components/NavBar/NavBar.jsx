@@ -13,7 +13,7 @@ const NavBar = () => {
   const [isAboutDisplayed, setIsAboutDisplayed] = useState(false);
   const [data, setData] = useState(null);
   useEffect(() => {
-    axios.get('http://localhost:9001/navbar/EN').then(res => {
+    axios.get('https://adn-backend-mj63t.ondigitalocean.app/navbar/EN').then(res => {
       console.log(res.data.navBar);
       setData(res.data.navBar);
     });
